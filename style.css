@@ -1,1 +1,25 @@
-/* TODO: Create styles */
+
+body {
+  font-family: "Lucida Console", "Courier New", monospace;
+  background-color: black;
+  color:#ADFF2F;
+  margin: 0;
+  padding: 20px;
+}
+
+h1, #game-intro {
+  color: #00FF00;
+  text-align: center;
+}
+
+button{
+  background-color: rgb(32, 39, 39);
+  color:#ADFF2F;
+  border: 1px solid #ADFF2F;
+  padding: 10px 20px;
+}
+
+button:hover {
+  background-color: #ADFF2F;
+  color: black;
+}
