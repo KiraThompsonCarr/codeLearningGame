@@ -2,9 +2,14 @@
 body {
   font-family: "Lucida Console", "Courier New", monospace;
   background-color: black;
-  color:#ADFF2F;
+  color:#00FF00;
   margin: 0;
   padding: 20px;
+}
+
+#logo {
+  width: 40px;
+  height: auto;
 }
 
 h1, #game-intro {
@@ -12,14 +17,60 @@ h1, #game-intro {
   text-align: center;
 }
 
+#language-prompt{
+  display: inline-block;
+  width: 100%;
+}
+
+#language-choices {
+  display: inline-block;
+  padding: 10px;
+  margin: 10px;
+  background-color:rgb(0, 16, 17)
+}
+
 button{
   background-color: rgb(32, 39, 39);
-  color:#ADFF2F;
-  border: 1px solid #ADFF2F;
+  color:#00FF00;
+  border: 1px solid #00FF00;
   padding: 10px 20px;
 }
 
 button:hover {
-  background-color: #ADFF2F;
+  background-color: #00FF00;
   color: black;
+}
+
+form {
+  display: inline-block;
+  background-color: rgb(0, 16, 17);
+  margin-top:10px;
+  padding: 1em;
+}
+
+.form-field{
+  margin-bottom: 1em;
+}
+
+.form-field label {
+  display: inline-block;
+  width: 100%;
+
+}
+
+.form-field input,
+.form-field textarea {
+  font: 1em sans-serif;
+  width: 300px;
+  box-sizing:border-box;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  border: 1px solid #00FF00;
+}
+
+.button {
+  padding-left: 90px;
 }
