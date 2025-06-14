@@ -1,8 +1,14 @@
+:root {
+  --hacker-green: #00FF00;
+  --section-bg: rgb(0, 16, 17);
+  --button-bg: rgb(32, 39, 39);
+}
+
 
 body {
   font-family: "Lucida Console", "Courier New", monospace;
   background-color: black;
-  color:#00FF00;
+  color: var(--hacker-green);
   margin: 0;
   padding: 20px;
 }
@@ -13,8 +19,26 @@ body {
 }
 
 h1, #game-intro {
-  color: #00FF00;
+  color: var(--hacker-green);
   text-align: center;
+}
+
+.typewriter {
+  display: inline-block;
+  overflow: hidden;
+  border-right: 0.15em solid var(--hacker-green); /*pseudo-cursor*/
+  white-space: nowrap;
+  animation: typing 2s steps(30, end), blink 1.5s step-end infinite;
+  font-size: 2rem;
+}
+
+@keyframes typing { /*animates width of typewriter element*/
+  from { width: 0ch; } /*use characters rather than width so cursor stays where it should*/
+  to { width: 25ch; }
+}
+
+@keyframes blink { /*animates right border (cursor) blinking*/
+  50% {border-color: transparent;}
 }
 
 #language-prompt{
@@ -26,24 +50,26 @@ h1, #game-intro {
   display: inline-block;
   padding: 10px;
   margin: 10px;
-  background-color:rgb(0, 16, 17)
+  background-color:var(--section-bg);
 }
 
 button{
-  background-color: rgb(32, 39, 39);
-  color:#00FF00;
-  border: 1px solid #00FF00;
+  background-color: var(--button-bg);
+  color: var(--hacker-green);
+  border: 1px solid var(--hacker-green);
+  border-radius: 8px;
+  font-family: "Lucida Console", "Courier New", monospace;
   padding: 10px 20px;
 }
 
 button:hover {
-  background-color: #00FF00;
+  background-color: var(--hacker-green);
   color: black;
 }
 
 form {
   display: inline-block;
-  background-color: rgb(0, 16, 17);
+  background-color: var(--section-bg);
   margin-top:10px;
   padding: 1em;
 }
@@ -68,7 +94,7 @@ form {
 input:focus,
 textarea:focus {
   outline: none;
-  border: 1px solid #00FF00;
+  border: 1px solid var(--hacker-green);
 }
 
 .button {
